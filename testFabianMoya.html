@@ -3,8 +3,10 @@
 
 <head>
     <title>Test Fabian Moya</title>
-
-
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
@@ -15,10 +17,10 @@
                 <form onsubmit="return validateForm()" method="post">
                     Start Date:(Format: MM/DD/YYYY)
                     <input type="text" id="startDate" required="" pattern="(0[1-9]|1[012])[/.](0[1-9]|[12][0-9]|3[01])[/.](19|20)\d\d">
-                    <br> Number of days:
-                    <input type="text" name="numberDays" id="numberDays">
-                    <br> Country Code:
-                    <input type="text" name="countryCode" id="countryCode">
+                    <br> Number of days: <br/>1 or 2 digit day (1-31 depending on the month)
+                    <input type="text" name="numberDays" id="numberDays" pattern ="([1-9]|[12][0-9]|3[01])" required maxlength="2">
+                    <br> Country Code: Example CR, US
+                    <input type="text" name="countryCode" id="countryCode"  pattern="[A-Za-z]{2}" required>
                     <br>
                     <button type="submit" >Submit</button>
                 </form>
@@ -28,6 +30,9 @@
         </div>
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/calendar.js"></script>
+    <script type="text/javascript" src="js/getdata.js"></script>
 
 </body>
 
