@@ -12,10 +12,19 @@
         <div class="row">
             <div class="col-sm-6 text-center">
                 <h1>Test Fabian Moya</h1>
-
+                <form onsubmit="return validateForm()" method="post">
+                    Start Date:(Format: MM/DD/YYYY)
+                    <input type="text" id="startDate" required="" pattern="(0[1-9]|1[012])[/.](0[1-9]|[12][0-9]|3[01])[/.](19|20)\d\d">
+                    <br> Number of days:
+                    <input type="text" name="numberDays" id="numberDays">
+                    <br> Country Code:
+                    <input type="text" name="countryCode" id="countryCode">
+                    <br>
+                    <button type="submit" >Submit</button>
+                </form>
             </div>
-
-            <div id="caleandar" class="col-sm-6 text-center"></div>
+                <h2>Calculate Dates from : <span id="dates"></span></h2>
+                <div id="caleandar" class="col-sm-6 text-center"></div>
         </div>
     </div>
 
